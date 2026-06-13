@@ -4,6 +4,7 @@ equipment: [wall]
 focus: [lower-body-strength, core]
 movement_pattern: squat
 level: beginner
+progression: [horse-stance-squat]
 ---
 
 Isometric hold: back flat against a wall, slide down until the knees bend,
