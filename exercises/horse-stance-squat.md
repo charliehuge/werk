@@ -12,7 +12,7 @@ into a held bottom position, then stand. Default teach is toes turned
 out ~45°, knees tracking over the toes; turning the toes straight
 forward (classical horse stance) is the harder option, forcing the
 adductors and glutes to fight the knees open. Counts are prescribed
-per session.
+per workout.
 
 Cues: drop the hips between the legs, not the chest toward the floor;
 knees track out over (or fight toward) the toes; torso tall, pelvis

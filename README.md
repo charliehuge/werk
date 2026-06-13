@@ -1,6 +1,6 @@
 # werk
 
-A workout generator built as a **curated data library** plus two Claude Code skills. There is no algorithm or engine — Claude is the composer. You bring clean exercise data and named formats; Claude reads it and writes you a session tuned to the day's context (location, equipment, duration, who's in the room).
+A workout generator built as a **curated data library** plus two Claude Code skills. There is no algorithm or engine — Claude is the composer. You bring clean exercise data and named formats; Claude reads it and writes you a workout tuned to the day's context (location, equipment, duration, who's in the room).
 
 Focus areas: mobility, lower-body strength, and aggressive inline skating.
 
@@ -14,7 +14,7 @@ Focus areas: mobility, lower-body strength, and aggressive inline skating.
 /workout
 ```
 
-Claude asks what it needs (location, equipment, duration, focus) and prints a session, saving a dated copy to `sessions/`.
+Claude asks what it needs (location, equipment, duration, focus) and prints a workout, saving a dated copy to `workouts/`.
 
 ```
 /add-exercise <paste an article, a URL, or describe a movement>
@@ -26,9 +26,9 @@ Claude drafts a library entry, shows it to you, and only writes the file after y
 
 | Term | What it is |
 |------|------------|
-| **Session** | One generated workout. Stateless — made fresh each time, nothing remembered between runs. The output of `/workout`. |
-| **Exercise** | A single movement, one markdown file in `exercises/`. Tagged with equipment, focus, movement pattern, level. **No sets/reps/load** — dosing is decided per session. |
-| **Format** | A reusable session template (shape, timing, build rules), one file in `formats/`. A session can start from a format or be free-form. |
+| **Workout** | One generated workout. Stateless — made fresh each time, nothing remembered between runs. The output of `/workout`. |
+| **Exercise** | A single movement, one markdown file in `exercises/`. Tagged with equipment, focus, movement pattern, level. **No sets/reps/load** — dosing is decided per workout. |
+| **Format** | A reusable workout template (shape, timing, build rules), one file in `formats/`. A workout can start from a format or be free-form. |
 | **Location** | A named venue, one file in `locations/`, carrying its equipment list and notes on surface/space. Picking one pre-fills available equipment. |
 | **Equipment** | What an exercise needs (dumbbell, band, skates, …). The one **hard filter** — Claude never programs gear you don't have. Everything else is judgment. |
 | **Focus** | The quality an exercise trains (lower-body strength, hip mobility, balance, skating). Guides selection, not filtering. |
@@ -43,19 +43,19 @@ The repo is meant to be read like a wiki on GitHub. Start at the index — [`exe
 - **Progressions & regressions** — the harder/easier movement variants, as links to those exercise pages.
 - **References** — any source articles and supplemental demo videos.
 
-Generated sessions link each exercise name back to its library page, so you can jump from a run-sheet to full cues.
+Generated workouts link each exercise name back to its library page, so you can jump from a run-sheet to full cues.
 
 These links are produced from each file's frontmatter by `scripts/build-wiki.py` — you edit frontmatter, not links. After changing exercise frontmatter by hand, run `python3 scripts/build-wiki.py` to refresh the footers and index.
 
 ## Using `/workout`
 
-Generates a session.
+Generates a workout.
 
 1. **Start point** — name a format (`Strength Circuit`, `Functional Mobility`) or just describe what you want ("45-min lower-body day for 8 people").
 2. **Answer the prompts** — Claude asks for anything missing:
    - *Required:* location, equipment available, duration.
    - *Optional:* level (defaults to intermediate), focus/goal, group size (matters for station/circuit formats).
-3. **Get the session** — Claude filters the library by your equipment, follows the format's build rules, and decides the dosing. The shape matches the format (e.g. a coach's run-sheet for a circuit). A dated file lands in `sessions/`.
+3. **Get the workout** — Claude filters the library by your equipment, follows the format's build rules, and decides the dosing. The shape matches the format (e.g. a coach's run-sheet for a circuit). A dated file lands in `workouts/`.
 
 **Flags:**
 - `--terse` — collapse the output to a bare checklist for solo use, skipping the coaching run-sheet.
@@ -93,9 +93,9 @@ werk/
 ├── SPEC.md          # build plan + data model
 ├── vocabulary.md    # controlled tag values
 ├── exercises/       # one .md per movement + README.md index
-├── formats/         # one .md per session template
+├── formats/         # one .md per workout template
 ├── locations/       # one .md per venue
-├── sessions/        # generated outputs, dated
+├── workouts/        # generated outputs, dated
 ├── scripts/         # build-wiki.py — regenerates footers + index
 └── .claude/skills/  # /workout and /add-exercise
 ```

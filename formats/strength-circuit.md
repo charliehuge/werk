@@ -2,7 +2,7 @@
 
 ## Shape
 
-Station-based circuit. 5–6 stations, each one exercise. Group rotates through all stations to complete a round; 3 rounds is the default. Focus is **inherited from session context** (e.g. "lower body day") — this format has no intrinsic focus.
+Station-based circuit. 5–6 stations, each one exercise. Group rotates through all stations to complete a round; 3 rounds is the default. Focus is **inherited from workout context** (e.g. "lower body day") — this format has no intrinsic focus.
 
 ## Timing
 
@@ -12,7 +12,7 @@ Station-based circuit. 5–6 stations, each one exercise. Group rotates through 
 
 ## How to build it
 
-- One exercise per station, drawn from the session's focus.
+- One exercise per station, drawn from the workout's focus.
 - **No two consecutive stations with the same movement pattern.**
 - Pair antagonist or non-competing patterns next to each other (squat → pull, hinge → push) so a minute of work doesn't pre-fatigue the next station.
 - At most one high-skill/balance exercise per circuit — a full minute under fatigue degrades skill work.
@@ -29,4 +29,4 @@ A run-sheet to coach from the front of the room:
 
 ## Notes
 
-- Dosing is per-session: timing above is the default, override in context ("40/20 today", "rep-based for small group").
+- Dosing is per-workout: timing above is the default, override in context ("40/20 today", "rep-based for small group").

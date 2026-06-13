@@ -2,7 +2,7 @@
 
 ## Shape
 
-Two parts: a short **warm flow** (one continuous movement sequence, transitions linked) to raise temperature and grease global range, then **targeted joint blocks** chosen from the session focus (e.g. ankle → hip → T-spine). Each block drills one area with 2–3 exercises moving from open/unloaded toward end-range/controlled.
+Two parts: a short **warm flow** (one continuous movement sequence, transitions linked) to raise temperature and grease global range, then **targeted joint blocks** chosen from the workout focus (e.g. ankle → hip → T-spine). Each block drills one area with 2–3 exercises moving from open/unloaded toward end-range/controlled.
 
 ## Timing
 
@@ -12,7 +12,7 @@ Two parts: a short **warm flow** (one continuous movement sequence, transitions 
 
 ## How to build it
 
-- **Intrinsic focus: mobility** (hip / ankle / T-spine by default for this clientele). Session context narrows or re-weights, doesn't replace.
+- **Intrinsic focus: mobility** (hip / ankle / T-spine by default for this clientele). Workout context narrows or re-weights, doesn't replace.
 - Controlled tempo throughout. **No loading to failure** — load only to support position or add end-range demand.
 - Order blocks ground-up or top-down; within a block: open the joint → control the range → integrate (a standing/loaded move that uses the new range).
 - Balance work integrates well at the end of a block (new range + stabilization).
@@ -28,4 +28,4 @@ A flowing sequence sheet:
 
 ## Notes
 
-- Dosing is per-session; block count and durations above are defaults.
+- Dosing is per-workout; block count and durations above are defaults.

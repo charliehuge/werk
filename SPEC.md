@@ -1,13 +1,13 @@
 # werk — High-Level Spec
 
-A tool for generating workout **Sessions** for group fitness classes, personal-training work, and the author's own training, with a focus on mobility, lower-body strength, and aggressive inline skating.
+A tool for generating **Workouts** for group fitness classes, personal-training work, and the author's own training, with a focus on mobility, lower-body strength, and aggressive inline skating.
 
 The repo is a **curated data library** (exercises, formats, locations) plus two Claude Code skills that compose and grow it. There is no generation engine — Claude is the composer. See [ADR-0001](docs/adr/0001-data-library-not-engine.md). Domain language is defined in [CONTEXT.md](CONTEXT.md); this spec is the build plan.
 
 ## Principles
 
 - **Data + Claude, not an algorithm.** Value lives in clean data and precise vocabulary.
-- **Stateless.** Each Session is generated fresh from supplied context. No client/person tracking in v1.
+- **Stateless.** Each Workout is generated fresh from supplied context. No client/person tracking in v1.
 - **Equipment is a hard filter; everything else is judgment.** The one thing composition must get mechanically right is "don't program an exercise we can't equip."
 - **Vocabulary discipline.** Structured tag values are controlled (`vocabulary.md`) so filters don't silently miss synonyms.
 
@@ -21,7 +21,7 @@ werk/
 ├── exercises/            # one .md per exercise — flat, kebab-case + README.md index
 ├── formats/              # one .md per format — prose skeleton
 ├── locations/            # one .md per venue — {name, equipment[], notes}
-├── sessions/             # generated outputs, dated
+├── workouts/             # generated outputs, dated
 ├── scripts/build-wiki.py # regenerates exercise footers + index from frontmatter
 ├── docs/adr/             # architecture decision records
 └── .claude/skills/
@@ -35,7 +35,7 @@ Flat directories throughout. `focus` is multi-valued, so folders would force a f
 
 ### Exercise (`exercises/*.md`)
 
-Markdown with YAML frontmatter; body is coaching prose. **No dosing** — sets/reps/time/load are decided at the Session level.
+Markdown with YAML frontmatter; body is coaching prose. **No dosing** — sets/reps/time/load are decided at the Workout level.
 
 ```yaml
 ---
@@ -72,19 +72,19 @@ The repo is a **navigable wiki**: every markdown file links to the related ones,
 
 - **Exercise footer** — below a `<!-- wiki-footer -->` sentinel, each file carries generated links: **Trains** (focus/equipment/pattern/level → `vocabulary.md` sections), **Progressions & regressions** (→ exercise files), **References** (`sources`/`videos`). Authors write only frontmatter + prose *above* the sentinel.
 - **Index** — `exercises/README.md` lists every exercise grouped by focus, each linked.
-- **Sessions** — generated sessions link each exercise name to its library file.
+- **Workouts** — generated workouts link each exercise name to its library file.
 - **Generator** — `scripts/build-wiki.py` is the single authority for footers + index. It reads frontmatter, regenerates everything below the sentinel, rebuilds the index, and flags unresolved `progression`/`regression` refs. Idempotent; safe to re-run. Hand-maintained backlinks are out of scope — a future visualization layer derives the reverse graph from the same frontmatter.
 
 ### Format (`formats/*.md`)
 
-Prose with a consistent skeleton. Carries **structure always** and **intrinsic selection rules when applicable**, and defines the Session's output shape.
+Prose with a consistent skeleton. Carries **structure always** and **intrinsic selection rules when applicable**, and defines the Workout's output shape.
 
 Skeleton headings: **Shape** · **Timing** · **How to build it** (selection/balance rules) · **Output** · **Notes**.
 
 - *Strength Circuit* — stations/rounds/work-rest structure; focus inherited from context.
 - *Functional Mobility* — implies focus = mobility, controlled tempo, no loading to failure.
 
-A Session may also be **free-form** (no format) — Claude proposes structure from the description.
+A Workout may also be **free-form** (no format) — Claude proposes structure from the description.
 
 ### Location (`locations/*.md`)
 
@@ -104,20 +104,20 @@ At generation, picking a Location pre-populates available equipment (editable fo
 
 Canonical values for `equipment`, `focus`, `movement_pattern`, `level`. Both skills read it. Ingest maps source synonyms (e.g. "DBs" → `dumbbell`) onto canonical terms and prompts before adding a genuinely new value.
 
-### Session (`sessions/YYYY-MM-DD-description.md`)
+### Workout (`workouts/YYYY-MM-DD-description.md`)
 
 Saved generated output (also printed to terminal). Markdown, printable/phone-friendly. A saved artifact, not tracked state.
 
 ## Skill: `/workout`
 
-Generates a Session.
+Generates a Workout.
 
 1. **Start point** — a Format, or a free-form description.
 2. **Collect context** — interactively prompt for anything missing:
    - Required: location, equipment available, duration.
    - Optional: level (default intermediate), focus/goal, group size (only meaningful for station/circuit formats).
 3. **Resolve** — Format sets structure + intrinsic focus → context overrides/adds focus → filter exercises by `equipment ∩ requires` (Location-derived) → Claude composes respecting the Format's selection/balance rules and decides dosing.
-4. **Output** — shape defined by the Format; `--terse` collapses any Session to a bare checklist for self-use. Write a dated file to `sessions/` and print to terminal.
+4. **Output** — shape defined by the Format; `--terse` collapses any Workout to a bare checklist for self-use. Write a dated file to `workouts/` and print to terminal.
 
 ## Skill: `/add-exercise`
 

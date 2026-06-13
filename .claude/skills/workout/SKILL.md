@@ -1,11 +1,11 @@
 ---
 name: workout
-description: Generate a workout Session from the werk exercise library — group class run-sheets, PT sessions, or terse self-workouts. Use when the user asks for a workout, a session, a class plan, or invokes /workout. Supports starting from a named format (formats/) or a free-form description; --terse collapses output to a bare checklist.
+description: Generate a Workout from the werk exercise library — group class run-sheets, PT workouts, or terse self-workouts. Use when the user asks for a workout, a session, a class plan, or invokes /workout. Supports starting from a named format (formats/) or a free-form description; --terse collapses output to a bare checklist.
 ---
 
-# /workout — Generate a Session
+# /workout — Generate a Workout
 
-Composes one workout Session from the repo's data library. Stateless: everything comes from the context collected below. Domain language: `CONTEXT.md`. Tag values: `vocabulary.md`.
+Composes one Workout from the repo's data library. Stateless: everything comes from the context collected below. Domain language: `CONTEXT.md`. Tag values: `vocabulary.md`.
 
 ## Inputs
 
@@ -25,23 +25,23 @@ Optional (don't block on these; infer or default):
 ## Composition procedure
 
 1. **Read the format file** (if any): structure, timing, selection rules, output shape. Free-form: propose a structure from the description, state it briefly, proceed.
-2. **Resolve focus**: format's intrinsic focus first, session context narrows/overrides.
+2. **Resolve focus**: format's intrinsic focus first, workout context narrows/overrides.
 3. **Filter the library.** Scan frontmatter of every file in `exercises/`:
    - **Equipment is a hard filter**: exercise eligible iff its `equipment` list ⊆ available equipment. Never program around this.
    - **`requires` is soft**: reason its prose against the Location's `notes` (surface, space); exclude on contradiction (e.g. "smooth hard surface" vs grass).
 4. **Select & arrange** per the format's rules (pattern balance, antagonist pairing, level spread). Selection is driven by focus; prefer exercises whose `level` fits, and use `progression`/`regression` fields to offer per-exercise scaling for mixed groups.
-5. **Dose at session level** — sets/reps/work-rest/load live here, never in exercise files. Respect format defaults (e.g. Strength Circuit 1min/20s) unless context overrides.
+5. **Dose at workout level** — sets/reps/work-rest/load live here, never in exercise files. Respect format defaults (e.g. Strength Circuit 1min/20s) unless context overrides.
 6. **Sanity pass**: total time ≈ duration (warm-up + work + cooldown), no equipment violations, no two consecutive same-pattern stations where the format forbids it.
 
 ## Output
 
 1. Render in the **format's Output shape** (run-sheet, sequence sheet, …). `--terse`: one-line-per-exercise checklist instead, keep dosing.
-2. **Link every library exercise** to its file so the session reads like a wiki page: the first mention of each exercise becomes `[Goblet Squat](../exercises/goblet-squat.md)` (sessions live in `sessions/`, so the path is `../exercises/<slug>.md`; slug = filename minus `.md`). Apply in both the run-sheet and `--terse` checklist. Invented `(not in library)` items stay plain text — they have no file to point at.
-3. Write to `sessions/YYYY-MM-DD-<kebab-description>.md` (today's date; short description from focus/format). If the filename exists, append `-2`, `-3`, ….
-4. Print the full session to the terminal too.
+2. **Link every library exercise** to its file so the workout reads like a wiki page: the first mention of each exercise becomes `[Goblet Squat](../exercises/goblet-squat.md)` (workouts live in `workouts/`, so the path is `../exercises/<slug>.md`; slug = filename minus `.md`). Apply in both the run-sheet and `--terse` checklist. Invented `(not in library)` items stay plain text — they have no file to point at.
+3. Write to `workouts/YYYY-MM-DD-<kebab-description>.md` (today's date; short description from focus/format). If the filename exists, append `-2`, `-3`, ….
+4. Print the full workout to the terminal too.
 
 ## Rules
 
-- Use glossary terms (Session, Format, Location, Focus) exactly as defined in `CONTEXT.md`.
+- Use glossary terms (Workout, Format, Location, Focus) exactly as defined in `CONTEXT.md`.
 - If the library can't fill the plan (focus has too few eligible exercises), say so and name the gap — suggest `/add-exercise` rather than inventing non-library exercises. Inventing is allowed only if the user explicitly okays it; mark invented items *(not in library)*.
 - Coaching cues in the output come from the exercise files' bodies — compress, don't rewrite.
