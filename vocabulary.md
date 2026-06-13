@@ -12,6 +12,7 @@ Empty list = bodyweight.
 - `box` — plyo box or sturdy bench-height surface
 - `mat`
 - `bench`
+- `wall` — stable wall to load against
 - `skates` — inline skates
 - `protective-gear` — helmet, knee/wrist pads
 
