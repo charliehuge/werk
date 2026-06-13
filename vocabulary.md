@@ -1,6 +1,6 @@
 # Vocabulary
 
-Canonical tag values for exercise frontmatter. Both `/workout` and `/ingest-exercise` read this file. Ingest maps source synonyms onto these terms ("DBs" → `dumbbell`) and prompts before adding a new value — never silently invents variants.
+Canonical tag values for exercise frontmatter. Both `/workout` and `/add-exercise` read this file. Ingest maps source synonyms onto these terms ("DBs" → `dumbbell`) and prompts before adding a new value — never silently invents variants.
 
 ## equipment
 

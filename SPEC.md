@@ -25,7 +25,7 @@ werk/
 ├── docs/adr/             # architecture decision records
 └── .claude/skills/
     ├── workout/          # /workout
-    └── ingest-exercise/  # /ingest-exercise
+    └── add-exercise/     # /add-exercise
 ```
 
 Flat directories throughout. `focus` is multi-valued, so folders would force a false single home; Claude scans frontmatter across the flat dir. Add an index only if scanning gets slow.
@@ -99,7 +99,7 @@ Generates a Session.
 3. **Resolve** — Format sets structure + intrinsic focus → context overrides/adds focus → filter exercises by `equipment ∩ requires` (Location-derived) → Claude composes respecting the Format's selection/balance rules and decides dosing.
 4. **Output** — shape defined by the Format; `--terse` collapses any Session to a bare checklist for self-use. Write a dated file to `sessions/` and print to terminal.
 
-## Skill: `/ingest-exercise`
+## Skill: `/add-exercise`
 
 Grows the library from sources.
 
@@ -117,7 +117,7 @@ Grows the library from sources.
 2. Two `formats/` files — Strength Circuit, Functional Mobility.
 3. A handful of `exercises/` and one `locations/` file — enough to exercise the flow.
 4. `/workout` skill against that seed data.
-5. `/ingest-exercise` skill to scale the library.
+5. `/add-exercise` skill to scale the library.
 
 ## Out of scope (v1)
 

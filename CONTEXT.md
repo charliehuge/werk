@@ -40,5 +40,5 @@ _Avoid_: Venue, place, gym
 **`/workout`**:
 Generates a session. Starts from a format or a free-form description, filters the exercise library by location and equipment, and composes the session.
 
-**`/ingest-exercise`**:
-Takes a source (video, article, etc.) and generates a library exercise from it.
+**`/add-exercise`**:
+Takes a source (article, URL, description) and adds library exercises from it, behind a review gate.

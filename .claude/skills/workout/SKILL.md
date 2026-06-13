@@ -42,5 +42,5 @@ Optional (don't block on these; infer or default):
 ## Rules
 
 - Use glossary terms (Session, Format, Location, Focus) exactly as defined in `CONTEXT.md`.
-- If the library can't fill the plan (focus has too few eligible exercises), say so and name the gap — suggest `/ingest-exercise` rather than inventing non-library exercises. Inventing is allowed only if the user explicitly okays it; mark invented items *(not in library)*.
+- If the library can't fill the plan (focus has too few eligible exercises), say so and name the gap — suggest `/add-exercise` rather than inventing non-library exercises. Inventing is allowed only if the user explicitly okays it; mark invented items *(not in library)*.
 - Coaching cues in the output come from the exercise files' bodies — compress, don't rewrite.

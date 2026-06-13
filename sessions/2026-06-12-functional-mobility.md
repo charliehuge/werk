@@ -45,4 +45,4 @@ Pass 1 ~50% range, pass 2 deeper, pass 3 full range with 2-breath pauses.
 Back to 90/90 ground sit → slow switches with eyes closed, then 1 min stillness, nasal breathing, notice the new range.
 
 ---
-*Library gap: T-spine has only World's Greatest Stretch — covered in warm flow, no dedicated block possible. Worth ingesting 2–3 T-spine drills (`/ingest-exercise`).*
+*Library gap: T-spine has only World's Greatest Stretch — covered in warm flow, no dedicated block possible. Worth adding 2–3 T-spine drills (`/add-exercise`).*
