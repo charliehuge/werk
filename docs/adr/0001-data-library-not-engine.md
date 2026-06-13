@@ -1,0 +1,7 @@
+# Workouts are composed by Claude from a data library, not produced by a generator engine
+
+A future reader will find a repo full of exercise/format data and two skills, but no algorithm that turns context into a workout — and may wonder where the "generator" went. There isn't one, by design. We considered three models: (A) a curated data library that Claude composes from at generation time, (B) deterministic generator code that emits a workout from context params, and (C) a hybrid where code handles hard constraints and Claude handles creative selection. We chose **A**.
+
+The repo's value is domain judgment — ISSA personal-training and Skate IA coaching expertise encoded as clean structured exercise data, sharp format prose, and a precise context vocabulary — not a scheduling algorithm. Claude is already strong at composition once the data and vocabulary are clean, so the hard, durable work is the library, not an engine. B would have locked us into a rules system that is brittle to the nuance of mobility/skating programming; C adds engine complexity before we know we need it.
+
+Consequence: correctness lives in data quality and vocabulary consistency (see `vocabulary.md`), not in tested generation code. If we later hit repeatability or consistency pain, the documented path is to harden into C — move the hard, mechanical parts (equipment filtering, time budgeting, dosing math) into code while leaving selection and coaching to Claude — without discarding the library.
