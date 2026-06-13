@@ -35,6 +35,18 @@ Claude drafts a library entry, shows it to you, and only writes the file after y
 
 Full glossary: [CONTEXT.md](CONTEXT.md). Build plan and data model: [SPEC.md](SPEC.md). Controlled tag values: [vocabulary.md](vocabulary.md).
 
+## Browsing the library (it's a wiki)
+
+The repo is meant to be read like a wiki on GitHub. Start at the index — [`exercises/README.md`](exercises/README.md) — which lists every exercise grouped by the quality it trains. Each exercise page ends with a generated footer linking:
+
+- **Trains** — its focus, equipment, pattern, and level, pointing into [vocabulary.md](vocabulary.md).
+- **Progressions & regressions** — the harder/easier movement variants, as links to those exercise pages.
+- **References** — any source articles and supplemental demo videos.
+
+Generated sessions link each exercise name back to its library page, so you can jump from a run-sheet to full cues.
+
+These links are produced from each file's frontmatter by `scripts/build-wiki.py` — you edit frontmatter, not links. After changing exercise frontmatter by hand, run `python3 scripts/build-wiki.py` to refresh the footers and index.
+
 ## Using `/workout`
 
 Generates a session.
@@ -80,13 +92,14 @@ werk/
 ├── CONTEXT.md       # glossary (the concepts)
 ├── SPEC.md          # build plan + data model
 ├── vocabulary.md    # controlled tag values
-├── exercises/       # one .md per movement
+├── exercises/       # one .md per movement + README.md index
 ├── formats/         # one .md per session template
 ├── locations/       # one .md per venue
 ├── sessions/        # generated outputs, dated
+├── scripts/         # build-wiki.py — regenerates footers + index
 └── .claude/skills/  # /workout and /add-exercise
 ```
 
 ## Adding data by hand
 
-You don't need `/add-exercise` — every file is plain markdown. Copy an existing `exercises/*.md` as a template, keep tag values inside `vocabulary.md`, and leave out dosing. New formats follow the skeleton in [SPEC.md](SPEC.md): **Shape · Timing · How to build it · Output · Notes**.
+You don't need `/add-exercise` — every file is plain markdown. Copy an existing `exercises/*.md` as a template, edit only the frontmatter and coaching prose (leave the `<!-- wiki-footer -->` section alone — it's generated), keep tag values inside `vocabulary.md`, and leave out dosing. Then run `python3 scripts/build-wiki.py` to regenerate the footer links and the index. New formats follow the skeleton in [SPEC.md](SPEC.md): **Shape · Timing · How to build it · Output · Notes**.

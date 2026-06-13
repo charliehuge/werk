@@ -17,3 +17,14 @@ thread, let the eyes drive the rotation on the way up.
 
 Common faults: hips swinging sideways to fake range, collapsing onto the
 shoulder instead of reaching, holding breath at end range.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [t-spine-mobility](../vocabulary.md#focus)  
+**Equipment:** [mat](../vocabulary.md#equipment)  
+**Pattern:** [rotation](../vocabulary.md#movement_pattern) · **Level:** [beginner](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Easier: [Open Book](open-book.md)

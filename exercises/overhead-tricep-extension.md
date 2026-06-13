@@ -12,3 +12,14 @@ Standing, one dumbbell held overhead in both hands, lower behind the head and ex
 Cues: elbows narrow and pointing forward, ribs down, lower slow behind the head, full lockout without arching the back.
 
 Common faults: elbows flaring wide, low back arching, cutting the stretch short.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [upper-body-strength](../vocabulary.md#focus)  
+**Equipment:** [dumbbell](../vocabulary.md#equipment)  
+**Pattern:** [push](../vocabulary.md#movement_pattern) · **Level:** [beginner](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Harder: [Tricep Dip](tricep-dip.md)

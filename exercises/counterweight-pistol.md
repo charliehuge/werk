@@ -20,3 +20,15 @@ weight drop toward the chest.
 Common faults: pulling the weight in (it stops counterbalancing),
 heel lifting at depth, free leg bending and touching down, falling
 backward out of the bottom.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus) · [balance](../vocabulary.md#focus) · [skating](../vocabulary.md#focus)  
+**Equipment:** [dumbbell](../vocabulary.md#equipment)  
+**Pattern:** [squat](../vocabulary.md#movement_pattern) · **Level:** [advanced](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Harder: [Pistol Squat](pistol-squat.md)
+- Easier: [Assisted Pistol](assisted-pistol.md)

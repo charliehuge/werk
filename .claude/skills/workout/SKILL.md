@@ -36,8 +36,9 @@ Optional (don't block on these; infer or default):
 ## Output
 
 1. Render in the **format's Output shape** (run-sheet, sequence sheet, …). `--terse`: one-line-per-exercise checklist instead, keep dosing.
-2. Write to `sessions/YYYY-MM-DD-<kebab-description>.md` (today's date; short description from focus/format). If the filename exists, append `-2`, `-3`, ….
-3. Print the full session to the terminal too.
+2. **Link every library exercise** to its file so the session reads like a wiki page: the first mention of each exercise becomes `[Goblet Squat](../exercises/goblet-squat.md)` (sessions live in `sessions/`, so the path is `../exercises/<slug>.md`; slug = filename minus `.md`). Apply in both the run-sheet and `--terse` checklist. Invented `(not in library)` items stay plain text — they have no file to point at.
+3. Write to `sessions/YYYY-MM-DD-<kebab-description>.md` (today's date; short description from focus/format). If the filename exists, append `-2`, `-3`, ….
+4. Print the full session to the terminal too.
 
 ## Rules
 

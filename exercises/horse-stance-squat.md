@@ -21,3 +21,15 @@ neutral; full-foot pressure; breathe through the pause.
 Common faults: knees caving on the descent or stand, torso tipping
 forward into a hinge, heels lifting, tucking the pelvis at the bottom,
 bailing out of the pause early.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus) · [hip-mobility](../vocabulary.md#focus)  
+**Equipment:** [bodyweight](../vocabulary.md#equipment)  
+**Pattern:** [squat](../vocabulary.md#movement_pattern) · **Level:** [intermediate](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Easier: [Box Squat](box-squat.md)
+- Easier: [Wall Sit](wall-sit.md)

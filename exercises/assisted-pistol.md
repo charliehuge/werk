@@ -20,3 +20,15 @@ slow into the bottom, drive through the whole foot to stand.
 Common faults: hauling up arm-over-arm, heel popping at depth,
 collapsing into the bottom instead of lowering, free leg dropping
 and touching down.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus) · [balance](../vocabulary.md#focus) · [skating](../vocabulary.md#focus)  
+**Equipment:** [bodyweight](../vocabulary.md#equipment)  
+**Pattern:** [squat](../vocabulary.md#movement_pattern) · **Level:** [intermediate](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Harder: [Counterweight Pistol](counterweight-pistol.md)
+- Easier: [Pistol to Box](pistol-to-box.md)

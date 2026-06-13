@@ -12,3 +12,14 @@ Single-leg squat, free leg bent behind, lowering the back knee toward a mat. The
 Cues: arms reach forward as counterbalance, control the whole descent, kiss the mat — don't drop to it, stand without a push-off.
 
 Common faults: free foot touching down, knee crashing the mat, hip collapsing inward on the stand.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus) · [balance](../vocabulary.md#focus) · [skating](../vocabulary.md#focus)  
+**Equipment:** [mat](../vocabulary.md#equipment)  
+**Pattern:** [lunge](../vocabulary.md#movement_pattern) · **Level:** [advanced](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Easier: [Reverse Lunge](reverse-lunge.md)

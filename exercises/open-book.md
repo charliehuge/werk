@@ -18,3 +18,14 @@ arm.
 
 Common faults: top knee lifting (rotation leaks into the lumbar), arm
 flopping back without the chest following, rushing the return.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [t-spine-mobility](../vocabulary.md#focus)  
+**Equipment:** [mat](../vocabulary.md#equipment)  
+**Pattern:** [rotation](../vocabulary.md#movement_pattern) · **Level:** [beginner](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Harder: [Thread the Needle](thread-the-needle.md)

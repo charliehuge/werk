@@ -19,3 +19,14 @@ bottom is earned, not fallen into.
 Common faults: heel popping up (ankle range, not effort), rounding
 into a backward roll out of the bottom, free foot touching down,
 knee caving on the drive up.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus) · [balance](../vocabulary.md#focus) · [skating](../vocabulary.md#focus)  
+**Equipment:** [bodyweight](../vocabulary.md#equipment)  
+**Pattern:** [squat](../vocabulary.md#movement_pattern) · **Level:** [advanced](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Easier: [Counterweight Pistol](counterweight-pistol.md)

@@ -18,10 +18,11 @@ werk/
 ├── CONTEXT.md            # glossary (concepts)
 ├── SPEC.md               # this file
 ├── vocabulary.md         # controlled tag values (equipment, focus, movement_pattern, level)
-├── exercises/            # one .md per exercise — flat, kebab-case
+├── exercises/            # one .md per exercise — flat, kebab-case + README.md index
 ├── formats/              # one .md per format — prose skeleton
 ├── locations/            # one .md per venue — {name, equipment[], notes}
 ├── sessions/             # generated outputs, dated
+├── scripts/build-wiki.py # regenerates exercise footers + index from frontmatter
 ├── docs/adr/             # architecture decision records
 └── .claude/skills/
     ├── workout/          # /workout
@@ -46,14 +47,33 @@ level: beginner                    # beginner/intermediate/advanced
 progression: [front-squat]         # optional, multi — filename refs to extant exercises
 regression: [box-squat]            # optional, multi
 requires: smooth flat surface      # optional free prose — affordances beyond equipment
+sources: [https://…]               # optional — URL(s) the exercise was drawn from
+videos:                            # optional — supplemental demos for humans, never parsed
+  - title: Squat University demo
+    url: https://youtu.be/…
 ---
 
 Coaching cues, setup, common faults, breathing…
+
+---
+
+<!-- wiki-footer -->
+Generated link footer (Trains / Progressions & regressions / References).
 ```
 
 - `equipment`, `focus`, `movement_pattern`, `level` draw from `vocabulary.md`.
 - `progression`/`regression` are **movement variants only** (e.g. Overhead Tricep Extension regresses Tricep Dip), never dosing changes; targets must be existing exercise files.
 - `requires` captures surface/space needs Claude reasons over as prose (no `setting` axis — it was rejected as a lying proxy for equipment + surface + space).
+- `sources` and `videos` are **reference material for humans**, not parsed. A video link is supplemental only — it never builds an exercise.
+
+### Wiki linking
+
+The repo is a **navigable wiki**: every markdown file links to the related ones, GitHub-native (relative `[Name](slug.md)` links — no `[[wikilinks]]`). Frontmatter slugs stay the machine-readable source of truth; links are rendered from them.
+
+- **Exercise footer** — below a `<!-- wiki-footer -->` sentinel, each file carries generated links: **Trains** (focus/equipment/pattern/level → `vocabulary.md` sections), **Progressions & regressions** (→ exercise files), **References** (`sources`/`videos`). Authors write only frontmatter + prose *above* the sentinel.
+- **Index** — `exercises/README.md` lists every exercise grouped by focus, each linked.
+- **Sessions** — generated sessions link each exercise name to its library file.
+- **Generator** — `scripts/build-wiki.py` is the single authority for footers + index. It reads frontmatter, regenerates everything below the sentinel, rebuilds the index, and flags unresolved `progression`/`regression` refs. Idempotent; safe to re-run. Hand-maintained backlinks are out of scope — a future visualization layer derives the reverse graph from the same frontmatter.
 
 ### Format (`formats/*.md`)
 
@@ -107,9 +127,9 @@ Grows the library from sources.
 2. **Dedup** — scan `exercises/` for same/near-duplicate; offer merge / new / skip.
 3. **Draft** — fill `equipment`, `focus`, `movement_pattern`, `level`, `progression`/`regression`, cues; map tags onto `vocabulary.md` and flag low-confidence fields and new vocab candidates.
 4. **Review gate** — show the draft, take edits/approval. Never silent-writes.
-5. **Write** — emit `exercises/<kebab-name>.md` per approved exercise. Within a batch, cross-link progression/regression refs.
+5. **Write** — emit `exercises/<kebab-name>.md` (frontmatter + prose) per approved exercise, then run `scripts/build-wiki.py` to render footers and rebuild the index. Within a batch, cross-link progression/regression refs.
 
-**Video is phase-2.** Claude has no native video modality; the documented path is a preprocessing step inside this skill — `ffmpeg` keyframe extraction + audio transcript (whisper) → frames + text feed the same draft→review→write flow.
+**Video is supplemental, not a source.** Claude has no native video modality and does not parse video. A video link is captured as a `videos:` reference attached to an exercise — extra material for humans. Building an exercise still needs text (a description, transcript, or article); a video alone prompts the user for that text, then the link rides along as a reference.
 
 ## Build order (suggested)
 
@@ -121,4 +141,4 @@ Grows the library from sources.
 
 ## Out of scope (v1)
 
-Client/person tracking and progression-over-time · a deterministic generation engine · video ingestion · any non–Claude-Code surface (web/phone/print app).
+Client/person tracking and progression-over-time · a deterministic generation engine · video *parsing* (videos are supplemental links only) · hand-maintained backlinks (a future viz derives the reverse graph) · any non–Claude-Code surface (web/phone/print app).

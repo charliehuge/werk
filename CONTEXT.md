@@ -28,6 +28,12 @@ The quality an exercise trains (lower-body strength, hip mobility, balance, skat
 **Progression / Regression**:
 A harder / easier *movement variant* of an exercise, referencing another exercise by filename (e.g. Overhead Tricep Extension is a wrist-saving regression of Tricep Dip). Optional and multi-valued. A change in dosing — more/less weight, faster/slower tempo — is not a variant and does not belong here. Targets must be extant exercises.
 
+**References (sources / videos)**:
+Supplemental external material attached to an exercise — `sources` (URLs the exercise was drawn from) and `videos` (demo links, `{title, url}`). **For humans, never parsed**: a video is reference material, not a content source, and never builds an exercise on its own. Stored in frontmatter, rendered as links in the exercise's footer.
+
+**Wiki**:
+The repo is a navigable wiki — every file links to the related ones with GitHub-native relative markdown links (`[Name](slug.md)`, not `[[wikilinks]]`). Frontmatter slugs are the machine-readable source of truth; links are *generated* from them by `scripts/build-wiki.py` (exercise footers + the `exercises/README.md` index), so authors maintain frontmatter, not links. Sessions link their exercises back to the library. A future visualization layer reads the same frontmatter.
+
 **Vocabulary**:
 The controlled set of canonical tag values for the structured exercise fields (equipment, focus, movement pattern, level), kept in `vocabulary.md`. The structural twin of this glossary: `CONTEXT.md` governs concepts, `vocabulary.md` governs tag values. Both skills read it; ingest maps source synonyms onto canonical terms and prompts before adding a genuinely new value rather than silently creating variants.
 

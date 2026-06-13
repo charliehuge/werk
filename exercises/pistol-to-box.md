@@ -18,3 +18,15 @@ for momentum.
 
 Common faults: plopping onto the box, free foot stabbing down for
 rescue, knee diving inward on the stand, rocking the torso to launch.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus) · [balance](../vocabulary.md#focus) · [skating](../vocabulary.md#focus)  
+**Equipment:** [box](../vocabulary.md#equipment)  
+**Pattern:** [squat](../vocabulary.md#movement_pattern) · **Level:** [intermediate](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Harder: [Assisted Pistol](assisted-pistol.md)
+- Easier: [Box Squat](box-squat.md)

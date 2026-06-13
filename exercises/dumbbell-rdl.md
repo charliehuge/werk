@@ -12,3 +12,14 @@ Hip hinge with dumbbells, soft knees, weights sliding down the thighs. The found
 Cues: push hips back like closing a door with your butt, shins vertical, long flat spine, stand by squeezing glutes.
 
 Common faults: squatting it (knees forward), rounding at the bottom, bar path drifting away from legs.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus)  
+**Equipment:** [dumbbell](../vocabulary.md#equipment)  
+**Pattern:** [hinge](../vocabulary.md#movement_pattern) · **Level:** [beginner](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Harder: [Single-Leg RDL](single-leg-rdl.md)

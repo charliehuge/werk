@@ -12,3 +12,16 @@ Squat to a box, light touch, stand back up. Teaches depth control and confident 
 Cues: feet shoulder-width, sit back not down, touch — don't plop, drive through whole foot.
 
 Common faults: collapsing onto the box, knees caving on the stand.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus)  
+**Equipment:** [box](../vocabulary.md#equipment)  
+**Pattern:** [squat](../vocabulary.md#movement_pattern) · **Level:** [beginner](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Harder: [Goblet Squat](goblet-squat.md)
+- Harder: [Horse Stance Squat](horse-stance-squat.md)
+- Harder: [Pistol to Box](pistol-to-box.md)

@@ -20,3 +20,14 @@ taking the load.
 
 Exit safely: push palms into the wall and hinge out, or walk one foot back
 toward the wall and slide up.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus) · [core](../vocabulary.md#focus)  
+**Equipment:** [wall](../vocabulary.md#equipment)  
+**Pattern:** [squat](../vocabulary.md#movement_pattern) · **Level:** [beginner](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Harder: [Horse Stance Squat](horse-stance-squat.md)

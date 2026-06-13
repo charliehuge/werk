@@ -12,3 +12,14 @@ Hands on a bench behind you, lower and press back up. Effective tricep loading, 
 Cues: shoulders down away from ears, elbows point straight back, hips skim the bench, range only as deep as the shoulders stay happy.
 
 Common faults: shrugging into the ears, elbows flaring, bouncing out of the bottom.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [upper-body-strength](../vocabulary.md#focus)  
+**Equipment:** [bench](../vocabulary.md#equipment)  
+**Pattern:** [push](../vocabulary.md#movement_pattern) · **Level:** [intermediate](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Easier: [Overhead Tricep Extension](overhead-tricep-extension.md)

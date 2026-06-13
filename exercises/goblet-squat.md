@@ -12,3 +12,14 @@ Squat holding a kettlebell at the chest. The front load counterbalances, letting
 Cues: elbows track inside knees, chest tall, full-foot pressure, own the bottom for a beat.
 
 Common faults: heels lifting, bell drifting away from chest, cutting depth.
+
+---
+
+<!-- wiki-footer -->
+
+**Trains:** [lower-body-strength](../vocabulary.md#focus) · [hip-mobility](../vocabulary.md#focus)  
+**Equipment:** [kettlebell](../vocabulary.md#equipment)  
+**Pattern:** [squat](../vocabulary.md#movement_pattern) · **Level:** [beginner](../vocabulary.md#level)
+
+**Progressions & regressions**
+- Easier: [Box Squat](box-squat.md)
