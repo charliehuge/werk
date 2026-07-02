@@ -1,9 +1,10 @@
 # Exercise Library
 
-23 exercises. Each appears under every focus it trains. Tag values: [vocabulary.md](../vocabulary.md).
+26 exercises. Each appears under every focus it trains. Tag values: [vocabulary.md](../vocabulary.md).
 
 ## ankle-mobility
 
+- [ATG Split Squat](atg-split-squat.md)
 - [Ankle Rocks](ankle-rocks.md)
 - [Cossack Squat](cossack-squat.md)
 - [Single-Leg Balance Reach](single-leg-balance-reach.md)
@@ -22,11 +23,13 @@
 
 ## core
 
+- [Push-Up](push-up.md)
 - [Wall Sit](wall-sit.md)
 
 ## hip-mobility
 
 - [90/90 Hip Switch](90-90-hip-switch.md)
+- [ATG Split Squat](atg-split-squat.md)
 - [Cossack Squat](cossack-squat.md)
 - [Goblet Squat](goblet-squat.md)
 - [Horse Stance Squat](horse-stance-squat.md)
@@ -35,6 +38,7 @@
 
 ## lower-body-strength
 
+- [ATG Split Squat](atg-split-squat.md)
 - [Assisted Pistol](assisted-pistol.md)
 - [Box Squat](box-squat.md)
 - [Cossack Squat](cossack-squat.md)
@@ -72,5 +76,7 @@
 
 ## upper-body-strength
 
+- [Incline Push-Up](incline-push-up.md)
 - [Overhead Tricep Extension](overhead-tricep-extension.md)
+- [Push-Up](push-up.md)
 - [Tricep Dip](tricep-dip.md)
